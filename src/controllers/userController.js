@@ -33,6 +33,7 @@ const userCreate = async function (req, res) {
         if (!confirmPassword) return res.status(400).send({ status: false, message: 'please provide Confirm Password' })
         if (!passwordRegex.test(confirmPassword)) return res.status(400).send({ status: false, message: 'please provide valid Password' })
 
+        if (Password !== confirmPassword) return res.status(400).send({ status: false, message: "password doesn't match"})
 
         const userData = await userModel.create(data)
         res.status(201).send({ status: true, message: 'user created successfully', data: userData })
@@ -165,4 +166,4 @@ const resetPassword = async function (req, res) {
 
 
 
-module.exports = { userCreate, userLogin, forgetPassword, resetPassword, sendresetPasswordMail }
+module.exports = { userCreate, userLogin, forgetPassword, resetPassword }
