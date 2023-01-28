@@ -1,0 +1,29 @@
+{
+  "name": "infotech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arshad026/Infotech.git"
+  },
+  "keywords": [],
+  "author": "Md Arshad Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arshad026/Infotech/issues"
+  },
+  "homepage": "https://github.com/arshad026/Infotech#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "randomstring": "^1.2.3"
+  }
+}
